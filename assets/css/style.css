@@ -1,0 +1,192 @@
+/* important CSS Starts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #364fd8;
+}
+
+::selection {
+  color: #fff;
+  background: #364fd8;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Work Sans", sans-serif;
+}
+
+/* Important CSS Ends */
+
+/* Common CSS Starts */
+.bg-black {
+  background-color: #000;
+}
+.bg-dark1{
+  background-color: #000f18;
+}
+.bg-dark2{
+  background-color: #010d15;
+}
+.ml-300 {
+  margin-left: 300px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  font-family: "Josefin Sans", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a{
+  color: #fff;
+}
+p{
+  font-family: "Work Sans", sans-serif;
+}
+.section-heading h1 {
+  font-size: 35px;
+  color: #fff;
+  display: block;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+.section-heading {
+  position: relative;
+  display: inline-block;
+  padding-left: 8px;
+}
+
+.section-heading:before {
+  position: absolute;
+  content: '';
+  background: #ffdd16;
+  width: 5px;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.section-heading:after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: #ffdd16;
+  bottom: 0;
+  left: 0;
+  box-shadow: 2px -2px 3px 1px #ffee8d;
+}
+/* Common CSS Ends */
+
+/* Main CSS Starts */
+
+/* Sidebar CSS Starts */
+aside {
+  position: fixed;
+  height: 100%;
+  width: 300px;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+}
+
+.logo {
+  text-align: center;
+  display: block;
+}
+
+nav {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center !important;
+  flex-wrap: nowrap !important;
+  flex-flow: column;
+}
+
+nav a img {
+  width: 160px;
+  margin-bottom: 20px;
+  display: BLOCK;
+}
+
+nav ul {
+  width: 100%;
+}
+
+nav ul li {
+  display: block;
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+nav ul li a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+  color: #ffd077;
+}
+.logo {
+  text-align: center;
+  margin: 30px 0;
+}
+/* Sidebar CSS Ends */
+
+/* Main > Home CSS Starts */
+.home {
+  background-image: url("https://i.imgur.com/qqGMKMQ.jpg");
+  width: auto;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.home:before {
+  position: absolute;
+  content: "";
+  background: #000f18;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+/* Main > Home CSS Ends */
+/* Main > About CSS Starts */
+.about-img img {
+  width: 100%;
+  box-shadow: 2px 0px 6px 0px #ffee8d;
+}
+/* Main > About CSS Ends */
+
+/* Main > Categories CSS Starts */
+
+/* Main > Categories CSS Ends */
+/* Main CSS Ends */
