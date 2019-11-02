@@ -32,12 +32,15 @@ body {
 .bg-black {
   background-color: #000;
 }
-.bg-dark1{
+
+.bg-dark1 {
   background-color: #000f18;
 }
-.bg-dark2{
+
+.bg-dark2 {
   background-color: #010d15;
 }
+
 .ml-300 {
   margin-left: 300px;
 }
@@ -51,6 +54,7 @@ h6 {
   font-weight: 800;
   font-family: "Josefin Sans", sans-serif;
 }
+
 h1,
 h2,
 h3,
@@ -58,12 +62,14 @@ h4,
 h5,
 h6,
 p,
-a{
+a {
   color: #fff;
 }
-p{
+
+p {
   font-family: "Work Sans", sans-serif;
 }
+
 .section-heading h1 {
   font-size: 35px;
   color: #fff;
@@ -71,6 +77,7 @@ p{
   margin-bottom: 0;
   line-height: 40px;
 }
+
 .section-heading {
   position: relative;
   display: inline-block;
@@ -81,22 +88,105 @@ p{
   position: absolute;
   content: '';
   background: #ffdd16;
-  width: 5px;
+  width: 3px;
   height: 100%;
   left: 0;
   bottom: 0;
 }
 
-.section-heading:after {
+.section-heading::after {
   position: absolute;
   content: '';
   width: 100%;
-  height: 3px;
+  height: 5px;
   background: #ffdd16;
-  bottom: 0;
-  left: 0;
-  box-shadow: 2px -2px 3px 1px #ffee8d;
+  bottom: -3px;
+  left: 0px;
+  box-shadow: 1px -1px 3px 0 #ffee8d;
 }
+
+.btn-success.focus,
+.btn-success:focus,
+.btn-success:not(:disabled):not(.disabled).active:focus,
+.btn-success:not(:disabled):not(.disabled):active:focus,
+.show>.btn-success.dropdown-toggle:focus {
+  box-shadow: 0 0 0 .2rem rgba(255, 221, 22, .5);
+  background-color: transparent;
+  color: #fff;
+}
+
+.bg-yellow,
+.btn-success:not(:disabled):not(.disabled).active,
+.btn-success:not(:disabled):not(.disabled):active,
+.show>.btn-success.dropdown-toggle,
+.btn-success {
+  background-color: #FFDD16;
+  border: 1px solid #FFDD16;
+}
+.btn.btn-success.nav-toggle {
+	padding: 2px 5px;
+	margin-top: 10px;
+}
+.btn-success {
+  text-transform: capitalize;
+  color: #000;
+  border: 1px solid #fff;
+}
+
+.btn-success:hover {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+}
+
+a.image-popup {
+  display: block;
+  position: relative;
+  -webkit-transition: .3s;
+  transition: .3s;
+  overflow: hidden;
+}
+
+a.image-popup img {
+  width: 100%;
+}
+
+a.image-popup:before {
+  left: -50%;
+  top: 0;
+}
+
+a.image-popup:after {
+  right: -50%;
+  top: 0;
+}
+
+a.image-popup:before,
+a.image-popup:after {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background-color: #FFDD16;
+  opacity: .5;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+a.image-popup:hover {
+  cursor: crosshair;
+}
+
+a.image-popup:hover:before {
+  left: 0;
+  cursor: crosshair;
+}
+
+a.image-popup:hover:after {
+  right: 0;
+  cursor: crosshair;
+}
+
 /* Common CSS Ends */
 
 /* Main CSS Starts */
@@ -152,15 +242,17 @@ nav ul li a:hover {
   text-decoration: none;
   color: #ffd077;
 }
+
 .logo {
   text-align: center;
   margin: 30px 0;
 }
+
 /* Sidebar CSS Ends */
 
 /* Main > Home CSS Starts */
 .home {
-  background-image: url("https://i.imgur.com/qqGMKMQ.jpg");
+  background-image: url('/assets/img/bg/4.jpg');
   width: auto;
   height: 100vh;
   position: relative;
@@ -183,10 +275,120 @@ nav ul li a:hover {
 .about-img img {
   width: 100%;
   box-shadow: 2px 0px 6px 0px #ffee8d;
+  border-radius: 5px;
 }
+
 /* Main > About CSS Ends */
 
 /* Main > Categories CSS Starts */
 
+.single-category {
+  height: 230px;
+  overflow: hidden;
+  display: block;
+}
+
+.single-category img {
+  width: 100%;
+  height: 100%;
+}
+
+.filter>.card,
+.single-photographer>.card,
+.blog-box>.card,
+.accordion>.card {
+  background: #021725;
+  margin-bottom: 15px;
+}
+
 /* Main > Categories CSS Ends */
+
+/* main > Gallery CSS Starts */
+.single-gallery img {
+  width: 100%;
+}
+
+/* main > Gallery CSS Ends */
+
+/* main > Photographers CSS Starts */
+.single-photographer>.card {
+  text-align: center;
+}
+
+.social-links ul li {
+  display: inline-block;
+  text-align: center;
+}
+
+.social-links ul li a {
+  color: #FFDD16;
+}
+
+.social-links ul li a i:hover {
+  color: #fff;
+  transform: rotate(360deg)scale(1.1);
+}
+
+.social-links ul li a i {
+  border: 1px solid;
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+/* main > Photographers CSS Ends */
+
+/* main > Blog CSS Start */
+.blog-box .card-img-top img{
+  width: 100%;
+}
+
+.blog-box .card-img-top {
+  position: relative;
+  z-index: 0;
+}
+.blog-box .card-img-top:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+/* main > Blog CSS End */
+
+/* main >FAQ CSS Starts */
+.faq-acc .card-header h2 button {
+	color: #fff;
+	font-size: 17px;
+  font-weight: 800;
+  transition: .3s;
+}
+.faq-acc .card-header h2 button:hover{
+  color: #ffdd16;
+  text-decoration: none;
+}
+.faq-acc .card-header {
+	border-bottom: 1px solid rgba(255,255,255,.125);
+}
+/* main >FAQ CSS Ends */
+/* main > contact css starts */
+.form-control {
+  background: transparent;
+  border-style: none;
+  border-bottom: 1px dashed #fff;
+  margin-bottom: 5px;
+}
+.form-control:focus {
+  color: #fff;
+  background-color: transparent;
+  box-shadow: 0 0 0 .2rem rgba(255, 221, 22, .5);
+}
+
+/* main > contact css ends */
 /* Main CSS Ends */
